@@ -46,17 +46,20 @@ uvicorn app.main:app --reload
 POST /analyze
 Content-Type: application/json
 
-{ "text": "This movie was absolutely fantastic!" }
+{ "text": "A wonderful, moving film with brilliant performances." }
 ```
 
 ```json
 {
   "sentiment": "positive",
-  "confidence": 0.9732,
-  "scores": { "negative": 0.0268, "positive": 0.9732 },
-  "text_preview": "This movie was absolutely fantastic!"
+  "confidence": 0.9321,
+  "scores": { "negative": 0.0679, "positive": 0.9321 },
+  "text_preview": "A wonderful, moving film with brilliant performances."
 }
 ```
+
+It is a bag-of-words model, so it can misread phrasing: "This movie was absolutely fantastic!" comes out
+*negative* (0.69), because "absolutely" often appears in negative reviews ("absolutely nothing").
 
 ---
 
