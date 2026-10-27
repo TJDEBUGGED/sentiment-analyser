@@ -80,4 +80,4 @@ sentiment-analyser/
 
 ---
 
-Built by [Harry Tijani](https://github.com/TJDEBUGGED)
+Released under the [MIT License](LICENSE). Built by [Harry Tijani](https://github.com/TJDEBUGGED)
